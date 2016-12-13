@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiSerialPort", "MultiSerialPort.csproj", "{FC3EFBB2-3917-4B87-9903-46AAD4813826}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialPortManage", "..\SerialPortManage\SerialPortManage.csproj", "{FAE0324B-0F64-4EDB-819D-A762F34CB638}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialPortManageTest", "SerialPortManageTest\SerialPortManageTest.csproj", "{C61F9ECF-ED86-4F2A-A696-E9C4D7E75EB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{FC3EFBB2-3917-4B87-9903-46AAD4813826}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC3EFBB2-3917-4B87-9903-46AAD4813826}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC3EFBB2-3917-4B87-9903-46AAD4813826}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAE0324B-0F64-4EDB-819D-A762F34CB638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAE0324B-0F64-4EDB-819D-A762F34CB638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAE0324B-0F64-4EDB-819D-A762F34CB638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAE0324B-0F64-4EDB-819D-A762F34CB638}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C61F9ECF-ED86-4F2A-A696-E9C4D7E75EB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C61F9ECF-ED86-4F2A-A696-E9C4D7E75EB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C61F9ECF-ED86-4F2A-A696-E9C4D7E75EB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C61F9ECF-ED86-4F2A-A696-E9C4D7E75EB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

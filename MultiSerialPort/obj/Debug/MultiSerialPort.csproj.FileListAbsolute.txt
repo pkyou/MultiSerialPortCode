@@ -1,1 +1,16 @@
 D:\Git\MultiSerialPortCode\MultiSerialPort\bin\Debug\MultiSerialPort.exe.config
+D:\Git\MultiSerialPortCode\MultiSerialPort\obj\Debug\MultiSerialPort.csprojResolveAssemblyReference.cache
+D:\Git\MultiSerialPortCode\MultiSerialPort\obj\Debug\App.g.cs
+D:\Git\MultiSerialPortCode\MultiSerialPort\obj\Debug\MultiSerialPort_MarkupCompile.cache
+D:\Git\MultiSerialPortCode\MultiSerialPort\bin\Debug\MultiSerialPort.exe
+D:\Git\MultiSerialPortCode\MultiSerialPort\bin\Debug\MultiSerialPort.pdb
+D:\Git\MultiSerialPortCode\MultiSerialPort\obj\Debug\MainWindow.g.cs
+D:\Git\MultiSerialPortCode\MultiSerialPort\obj\Debug\MultiSerialPort_MarkupCompile.lref
+D:\Git\MultiSerialPortCode\MultiSerialPort\obj\Debug\MainWindow.baml
+D:\Git\MultiSerialPortCode\MultiSerialPort\obj\Debug\MultiSerialPort.g.resources
+D:\Git\MultiSerialPortCode\MultiSerialPort\obj\Debug\MultiSerialPort.Properties.Resources.resources
+D:\Git\MultiSerialPortCode\MultiSerialPort\obj\Debug\MultiSerialPort.csproj.GenerateResource.Cache
+D:\Git\MultiSerialPortCode\MultiSerialPort\obj\Debug\MultiSerialPort.exe
+D:\Git\MultiSerialPortCode\MultiSerialPort\obj\Debug\MultiSerialPort.pdb
+D:\Git\MultiSerialPortCode\MultiSerialPort\obj\Debug\Resources\Style.baml
+D:\Git\MultiSerialPortCode\MultiSerialPort\obj\Debug\App.baml
