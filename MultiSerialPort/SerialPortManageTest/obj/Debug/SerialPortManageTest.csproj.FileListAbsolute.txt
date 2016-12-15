@@ -1,0 +1,8 @@
+D:\Git\MultiSerialPortCode\MultiSerialPort\SerialPortManageTest\bin\Debug\SerialPortManageTest.dll
+D:\Git\MultiSerialPortCode\MultiSerialPort\SerialPortManageTest\bin\Debug\SerialPortManageTest.pdb
+D:\Git\MultiSerialPortCode\MultiSerialPort\SerialPortManageTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Git\MultiSerialPortCode\MultiSerialPort\SerialPortManageTest\bin\Debug\SerialPortManage.dll
+D:\Git\MultiSerialPortCode\MultiSerialPort\SerialPortManageTest\bin\Debug\SerialPortManage.pdb
+D:\Git\MultiSerialPortCode\MultiSerialPort\SerialPortManageTest\obj\Debug\SerialPortManageTest.csprojResolveAssemblyReference.cache
+D:\Git\MultiSerialPortCode\MultiSerialPort\SerialPortManageTest\obj\Debug\SerialPortManageTest.dll
+D:\Git\MultiSerialPortCode\MultiSerialPort\SerialPortManageTest\obj\Debug\SerialPortManageTest.pdb

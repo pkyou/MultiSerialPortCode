@@ -1,0 +1,5 @@
+D:\Git\MultiSerialPortCode\SerialPortManage\bin\Debug\SerialPortManage.dll
+D:\Git\MultiSerialPortCode\SerialPortManage\bin\Debug\SerialPortManage.pdb
+D:\Git\MultiSerialPortCode\SerialPortManage\obj\Debug\SerialPortManage.csprojResolveAssemblyReference.cache
+D:\Git\MultiSerialPortCode\SerialPortManage\obj\Debug\SerialPortManage.dll
+D:\Git\MultiSerialPortCode\SerialPortManage\obj\Debug\SerialPortManage.pdb
