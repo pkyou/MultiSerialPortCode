@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO.Ports;
+using System.Threading;
 using System.Windows;
 using SerialPortManage;
 
@@ -39,13 +40,39 @@ namespace MultiSerialPort
                 MessageBox.Show(exception.Message);
             }
         }
-
         private void Com1(object sender, byte[] data)
         {
             Dispatcher.Invoke(() =>
             {
                 Port1DataLabel.Content = data[0];
             });
+        }
+
+        private void StartThreadToSendData(byte[] data, byte number)
+        {
+            Thread thread = new Thread(() =>
+            {
+                SendData(data,number);
+            });
+            thread.Start();
+        }
+
+        private void SendData(byte[] data, byte number)
+        {
+            SerialPort port1 = new SerialPort()
+            {
+                PortName = "COM"+number,
+                BaudRate = 115200,
+                Parity = Parity.None,
+                DataBits = 8,
+                StopBits = StopBits.One
+            };
+            PortManage manage = new PortManage();
+            if (manage.OpenPort(port1))
+            {
+                manage.SendDataPacket(data);
+                manage.ReceiveCompleteEvent += Com1;
+            }
         }
     }
 }
