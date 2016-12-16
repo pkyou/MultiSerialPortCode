@@ -99,6 +99,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SerialPortManage\SerialPortManage.csproj">
+      <Project>{FAE0324B-0F64-4EDB-819D-A762F34CB638}</Project>
+      <Name>SerialPortManage</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

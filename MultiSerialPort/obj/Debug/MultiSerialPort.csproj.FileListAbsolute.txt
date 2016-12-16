@@ -14,3 +14,5 @@ D:\Git\MultiSerialPortCode\MultiSerialPort\obj\Debug\MultiSerialPort.exe
 D:\Git\MultiSerialPortCode\MultiSerialPort\obj\Debug\MultiSerialPort.pdb
 D:\Git\MultiSerialPortCode\MultiSerialPort\obj\Debug\Resources\Style.baml
 D:\Git\MultiSerialPortCode\MultiSerialPort\obj\Debug\App.baml
+D:\Git\MultiSerialPortCode\MultiSerialPort\bin\Debug\SerialPortManage.dll
+D:\Git\MultiSerialPortCode\MultiSerialPort\bin\Debug\SerialPortManage.pdb
