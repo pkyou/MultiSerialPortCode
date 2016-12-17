@@ -48,10 +48,7 @@ namespace MultiSerialPort
             });
         }
 
-
-
-
-
+        // git by windows 
 
         private void StartThreadToSendData(byte[] data, byte number)
         {
