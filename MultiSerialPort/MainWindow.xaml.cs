@@ -48,6 +48,11 @@ namespace MultiSerialPort
             });
         }
 
+
+
+
+
+
         private void StartThreadToSendData(byte[] data, byte number)
         {
             Thread thread = new Thread(() =>
