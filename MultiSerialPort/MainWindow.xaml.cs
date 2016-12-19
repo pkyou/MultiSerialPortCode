@@ -20,20 +20,23 @@ namespace MultiSerialPort
         {
             try
             {
-                SerialPort port1 = new SerialPort()
-                {
-                    PortName = "COM1",
-                    BaudRate = 115200,
-                    Parity = Parity.None,
-                    DataBits = 8,
-                    StopBits = StopBits.One
-                };
-                PortManage manage = new PortManage();
-                if (manage.OpenPort(port1))
-                {
-                    manage.SendDataPacket(new byte[] { 0x01 });
-                    manage.ReceiveCompleteEvent += Com1;
-                }
+                // SerialPort port1 = new SerialPort()
+                // {
+                //     PortName = "COM1",
+                //     BaudRate = 115200,
+                //     Parity = Parity.None,
+                //     DataBits = 8,
+                //     StopBits = StopBits.One
+                // };
+                // PortManage manage = new PortManage();
+                // if (manage.OpenPort(port1))
+                // {
+                //     manage.SendDataPacket(new byte[] { 0x01 });
+                //     manage.ReceiveCompleteEvent += Com1;
+                // }
+
+                StartThreadToSendData(new byte[]{0x01,0x02},1);
+                StartThreadToSendData(new byte[]{0x03,0x02},2);
             }
             catch (Exception exception)
             {
