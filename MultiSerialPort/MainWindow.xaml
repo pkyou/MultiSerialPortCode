@@ -25,18 +25,33 @@
             </Grid.RowDefinitions>
             <StackPanel Orientation="Horizontal">
                 <Label Content="port 1 received data :"></Label>
-                <Label Name="Port1DataLabel" Width="80"></Label>
+                <Label Name="PortLabel1" Width="80"></Label>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Row="1">
                 <Label Content="port 3 received data :"></Label>
-                <Label Name="Port3Label" Width="80"></Label>
+                <Label Name="PortLabel3" Width="80"></Label>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Row="2">
                 <Label Content="port 5 received data :"></Label>
-                <Label Name="Port5Label" Width="80"></Label>
+                <Label Name="PortLabel5" Width="80"></Label>
             </StackPanel>
         </Grid>
         <Button Grid.Row="1" Grid.Column="0" Content="start test" Margin="10,0,10,0"
                 Click="StartClicked"></Button>
+        <Grid Grid.Row="0" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal"  >
+                <Label Content="port 7 received data :"></Label>
+                <Label Name="PortLabel7" Width="80"></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="1" >
+                <Label Content="port 9 received data :"></Label>
+                <Label Name="PortLabel9" Width="80"></Label>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>

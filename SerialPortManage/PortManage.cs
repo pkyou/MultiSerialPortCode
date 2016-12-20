@@ -9,7 +9,9 @@ namespace SerialPortManage
         public delegate void ReceiveCompletedDelete(object sender,byte[] data );
 
         public event ReceiveCompletedDelete ReceiveCompleteEvent;
-
+        public bool ReceiveCompleted { get; set; } = false;
+        public byte[] ReceivedDataPacket => _receivedDataPacket;
+        private byte[] _receivedDataPacket;
         private SerialPort _currentPort;
         public bool OpenPort(SerialPort port)
         {
@@ -32,7 +34,7 @@ namespace SerialPortManage
             return true;
         }
 
-        private byte[] _receivedDataPacket;
+        
         private void Received(object sender, SerialDataReceivedEventArgs e)
         {
             if (e.EventType == SerialData.Eof)
@@ -42,11 +44,14 @@ namespace SerialPortManage
             Thread.Sleep(100);
             _receivedDataPacket = new byte[_currentPort.BytesToRead];
             _currentPort.Read(_receivedDataPacket, 0, _receivedDataPacket.Length);
+            ReceiveCompleted = true;
             ReceiveCompleteEvent?.Invoke(sender,_receivedDataPacket);
+            _currentPort.Close();
         }
 
         public bool SendDataPacket(byte[] dataPackeg)
         {
+            ReceiveCompleted = false;
             _currentPort.Write(dataPackeg, 0, dataPackeg.Length);
             return true;
         }

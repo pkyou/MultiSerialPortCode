@@ -1,7 +1,9 @@
 ﻿using System;
 using System.IO.Ports;
+using System.Text;
 using System.Threading;
 using System.Windows;
+using System.Windows.Controls;
 using SerialPortManage;
 
 namespace MultiSerialPort
@@ -20,23 +22,11 @@ namespace MultiSerialPort
         {
             try
             {
-                // SerialPort port1 = new SerialPort()
-                // {
-                //     PortName = "COM1",
-                //     BaudRate = 115200,
-                //     Parity = Parity.None,
-                //     DataBits = 8,
-                //     StopBits = StopBits.One
-                // };
-                // PortManage manage = new PortManage();
-                // if (manage.OpenPort(port1))
-                // {
-                //     manage.SendDataPacket(new byte[] { 0x01 });
-                //     manage.ReceiveCompleteEvent += Com1;
-                // }
-
                 StartThreadToSendData(new byte[]{0x01,0x02},1);
-                StartThreadToSendData(new byte[]{0x03,0x02},2);
+                StartThreadToSendData(new byte[]{0x03,0x02},3);
+                StartThreadToSendData(new byte[]{0x05,0x02},5);
+                StartThreadToSendData(new byte[]{0x07,0x02},7);
+                StartThreadToSendData(new byte[]{0x09,0x02},9);
             }
             catch (Exception exception)
             {
@@ -47,12 +37,9 @@ namespace MultiSerialPort
         {
             Dispatcher.Invoke(() =>
             {
-                Port1DataLabel.Content = data[0];
+                PortLabel1.Content = data[0];
             });
         }
-
-        // git by windows 
-
         private void StartThreadToSendData(byte[] data, byte number)
         {
             Thread thread = new Thread(() =>
@@ -61,7 +48,6 @@ namespace MultiSerialPort
             });
             thread.Start();
         }
-
         private void SendData(byte[] data, byte number)
         {
             SerialPort port1 = new SerialPort()
@@ -76,8 +62,31 @@ namespace MultiSerialPort
             if (manage.OpenPort(port1))
             {
                 manage.SendDataPacket(data);
-                manage.ReceiveCompleteEvent += Com1;
+                do
+                {
+                } while (!manage.ReceiveCompleted);
+                Dispatcher.Invoke(() =>
+                {
+                    string receivedString = GetString(manage.ReceivedDataPacket);
+                    FindDataLabel(number).Content = receivedString;
+                });
             }
+        }
+
+        private Label FindDataLabel(byte number)
+        {
+            Label label = this.FindName("PortLabel" + number) as Label;
+            return label;
+        }
+
+        private string GetString(byte[] bytes)
+        {
+            string result="";
+            foreach (byte b in bytes)
+            {
+                result += b;
+            }
+            return result;
         }
     }
 }
